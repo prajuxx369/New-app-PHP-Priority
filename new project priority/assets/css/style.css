@@ -1,0 +1,61 @@
+:root {
+    --primary-color: #0056b3; /* Deep blue for trust */
+    --secondary-color: #28a745; /* Green for success/growth */
+    --accent-color: #ffc107; /* Amber for warnings/attention */
+    --light-bg: #f8f9fa;
+    --dark-text: #343a40;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--light-bg);
+    color: var(--dark-text);
+}
+
+.navbar {
+    background-color: var(--white);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    color: var(--primary-color) !isImportant;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-success {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+footer {
+    background-color: #1a1a1a;
+    color: var(--white);
+    padding: 3rem 0;
+}
+
+.hero-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #e9f5ff 0%, #ffffff 100%);
+}
+
+.card {
+    border: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.verified-badge {
+    color: var(--secondary-color);
+    font-size: 0.8rem;
+    font-weight: 600;
+}

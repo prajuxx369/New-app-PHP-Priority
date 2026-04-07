@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><title>Transparency - Smart NGO</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"><link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body onload="updateNav()">
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top py-3">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="index.html"><img src="images/logo.png" alt="Logo">Smart NGO</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="transparency.html">Transparency</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="d-flex align-items-center" id="navActions">
+                    <a href="login.html" class="btn btn-outline-primary me-2 px-4 rounded-pill">Login</a>
+                    <a href="register.html" class="btn btn-primary px-4 rounded-pill text-white">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container py-5">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h1 class="display-3 fw-bold text-primary mb-3">Transparent by Architecture.</h1>
+            <p class="lead text-muted px-md-5">We've built a 'Trust Loop' that ensures your donation is never 'lost' in administrative overhead. Here's exactly how we track your impact.</p>
+        </div>
+
+        <div class="row align-items-center mb-5 overflow-hidden" data-aos="fade-right">
+            <div class="col-md-6 mb-4 mb-md-0"><img src="images/transparency_verify_jpg_1775577294286.png" class="img-fluid rounded-5 shadow-lg" alt="Verification"></div>
+            <div class="col-md-6 ps-md-5">
+                <h3 class="fw-bold mb-3">1. Multi-Stage NGO Vetting</h3>
+                <p class="text-muted">Before an NGO can list a single project, they undergo a rigorous 4-step verification process. We audit their financial history, valid registration, and physical presence at the project sites. Only the top 5% of applicants make it onto our platform.</p>
+                <ul class="list-unstyled small text-muted"><li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Official Registration Check</li><li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>On-ground Site Visitation</li></ul>
+            </div>
+        </div>
+
+        <div class="row align-items-center mb-5 overflow-hidden" data-aos="fade-left">
+            <div class="col-md-6 order-md-2 mb-4 mb-md-0"><img src="images/transparency_audit_jpg_1775577312458.png" class="img-fluid rounded-5 shadow-lg" alt="Audit"></div>
+            <div class="col-md-6 pe-md-5 order-md-1 text-md-end">
+                <h3 class="fw-bold mb-3">2. Escrow-locked Funds</h3>
+                <p class="text-muted">When you donate, your money doesn't go straight to the NGO's general bank account. It's held in a project-specific escrow account. Funds are released incrementally as project milestones are met and verified by our system.</p>
+                <div class="p-3 bg-light rounded-3 d-inline-block text-start"><i class="fas fa-shield-alt text-primary me-2"></i><strong>Protection:</strong> No fund diversion possible.</div>
+            </div>
+        </div>
+
+        <div class="row align-items-center mb-5 overflow-hidden" data-aos="fade-right">
+            <div class="col-md-6 mb-4 mb-md-0"><img src="images/transparency_impact_jpg_1775577329988.png" class="img-fluid rounded-5 shadow-lg" alt="Impact Proof"></div>
+            <div class="col-md-6 ps-md-5">
+                <h3 class="fw-bold mb-3">3. Real-Time Impact Proof</h3>
+                <p class="text-muted">Once a milestone is reached, the NGO MUST upload geotagged photos, time-stamped receipts, and impact reports. You receive a notification instantly to see exactly where your contribution translated into change.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white py-5 border-top border-secondary">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-md-4">
+                    <h4 class="fw-bold text-primary mb-4">Smart NGO</h4>
+                    <p class="text-white-50 small">The world's most transparent platform for social good. We turn every donation into a verifiable story of impact.</p>
+                </div>
+                <div class="col-md-2">
+                    <h6 class="fw-bold mb-3">Platform</h6>
+                    <ul class="list-unstyled small"><li class="mb-2"><a href="projects.html" class="text-white-50 text-decoration-none">Projects</a></li><li class="mb-2"><a href="transparency.html" class="text-white-50 text-decoration-none">How it works</a></li></ul>
+                </div>
+                <div class="col-md-2">
+                    <h6 class="fw-bold mb-3">About</h6>
+                    <ul class="list-unstyled small"><li class="mb-2"><a href="about.html" class="text-white-50 text-decoration-none">Our Mission</a></li><li class="mb-2"><a href="contact.html" class="text-white-50 text-decoration-none">Get in touch</a></li></ul>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="fw-bold mb-3">Newsletter</h6>
+                    <form class="d-flex gap-2"><input type="email" placeholder="Your email" class="form-control rounded-pill bg-transparent border-secondary text-white"><button class="btn btn-primary rounded-pill px-4 text-white">Join</button></form>
+                </div>
+            </div>
+            <hr class="my-5 opacity-10">
+            <p class="text-center text-white-50 small m-0">&copy; 2026 Smart NGO Platform. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="app.js"></script>
+    <script>AOS.init({ duration: 1000, once: true });</script>
+</body>
+</html>

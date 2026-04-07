@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart NGO - 100% Transparent Giving</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body onload="updateNav()">
+    <nav class="navbar navbar-expand-lg sticky-top bg-white shadow-sm py-3">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="index.html">
+                <img src="images/logo.png" alt="Logo" class="d-inline-block align-text-top me-2" style="height: 40px;">
+                Smart NGO
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="transparency.html">Transparency</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="d-flex align-items-center" id="navActions">
+                    <a href="login.html" class="btn btn-outline-primary me-2 px-4 rounded-pill">Login</a>
+                    <a href="register.html" class="btn btn-primary px-4 rounded-pill text-white">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section text-center">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-10" data-aos="fade-up">
+                    <span class="badge bg-primary-subtle text-primary px-3 py-2 rounded-pill mb-3">100% Verified Impact</span>
+                    <h1 class="display-2 fw-bold text-dark mb-4">Donations You Can <span class="text-primary">Trace.</span> Impact You Can <span class="text-primary">See.</span></h1>
+                    <p class="lead text-muted mb-5 px-md-5">Stop wondering where your money goes. We bridge the trust gap by tracking every cent from your wallet to the final outcome with verifiable proof.</p>
+                    <div class="d-flex justify-content-center gap-3">
+                        <a href="projects.html" class="btn btn-primary btn-lg px-5 py-3 rounded-pill">Donate to a Project</a>
+                        <a href="transparency.html" class="btn btn-outline-primary btn-lg px-5 py-3 rounded-pill border-2">How it Works</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-5 bg-white overflow-hidden">
+        <div class="container py-5">
+            <div class="row align-items-center mb-5" data-aos="fade-right">
+                <div class="col-md-6 border-end-md">
+                    <h2 class="fw-bold display-5">A New Era of <br><span class="text-success">Philanthropic Trust</span></h2>
+                </div>
+                <div class="col-md-6 ps-md-5">
+                    <p class="text-muted mb-0">Unlike traditional platforms, Smart NGO demands proof at every step. We don't just ask for funds; we demand results and share them with you in real-time.</p>
+                </div>
+            </div>
+            <div class="row text-center mt-5">
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="stat-number">$124K+</div>
+                    <p class="text-muted fw-bold">Total Impact Delivered</p>
+                </div>
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="stat-number">8,500</div>
+                    <p class="text-muted fw-bold">Lives Touched</p>
+                </div>
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="stat-number">92%</div>
+                    <p class="text-muted fw-bold">Transparency Score</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5" style="background: #f8fbff;">
+        <div class="container py-5">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="fw-bold display-6">3 Simple Steps to Impact</h2>
+                <p class="text-muted">How we ensure your donation reaches the right hands.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="step-card text-center text-md-start">
+                        <div class="mb-4 text-primary fs-1"><i class="fas fa-search"></i></div>
+                        <h4 class="fw-bold mb-3">1. Choose & Donate</h4>
+                        <p class="text-muted small">Browse project-specific campaigns with clear budgets and goals. You donate directly to a cause, not a general fund.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="step-card text-center text-md-start">
+                        <div class="mb-4 text-success fs-1"><i class="fas fa-receipt"></i></div>
+                        <h4 class="fw-bold mb-3">2. Automatic Escrow</h4>
+                        <p class="text-muted small">Funds are held and released only when NGOs upload verifiable proof of purchase or activity for reached milestones.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="step-card text-center text-md-start">
+                        <div class="mb-4 text-warning fs-1"><i class="fas fa-camera"></i></div>
+                        <h4 class="fw-bold mb-3">3. See the Proof</h4>
+                        <p class="text-muted small">Receive real-time notifications with photos, receipts, and outcomes of exactly how your contribution was spent.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-white">
+        <div class="container py-5">
+            <div class="d-flex justify-content-between align-items-end mb-5" data-aos="fade-up">
+                <div>
+                    <h2 class="fw-bold display-6">Featured projects</h2>
+                    <p class="text-muted m-0">Vetted by our transparency team.</p>
+                </div>
+                <a href="projects.html" class="btn btn-outline-primary rounded-pill px-4">View All Projects</a>
+            </div>
+            <div id="featuredProjects" class="row"></div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-dark text-white rounded-5 mx-3 mb-5 overflow-hidden">
+        <div class="container py-5 text-center" data-aos="zoom-out">
+            <h2 class="fw-bold display-5 mb-4">Ready to rebuild trust in giving?</h2>
+            <p class="lead mb-5 opacity-75">Join 5,000+ donors who are already making a transparent impact.</p>
+            <a href="register.html" class="btn btn-primary btn-lg rounded-pill px-5 py-3 btn-glow">Join the Movement</a>
+        </div>
+    </section>
+
+    <footer class="bg-white py-5 border-top">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-md-4">
+                    <h4 class="fw-bold text-primary mb-4">Smart NGO</h4>
+                    <p class="text-muted small">The world's most transparent platform for social good. We turn every donation into a verifiable story of impact.</p>
+                </div>
+                <div class="col-md-2">
+                    <h6 class="fw-bold mb-3">Platform</h6>
+                    <ul class="list-unstyled small"><li class="mb-2"><a href="projects.html" class="text-muted text-decoration-none">How it works</a></li><li class="mb-2"><a href="#" class="text-muted text-decoration-none">NGO Fees</a></li></ul>
+                </div>
+                <div class="col-md-2">
+                    <h6 class="fw-bold mb-3">About</h6>
+                    <ul class="list-unstyled small"><li class="mb-2"><a href="about.html" class="text-muted text-decoration-none">Our Story</a></li><li class="mb-2"><a href="contact.html" class="text-muted text-decoration-none">Get in touch</a></li></ul>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="fw-bold mb-3">Impact Updates</h6>
+                    <form class="d-flex gap-2"><input type="email" placeholder="Your email" class="form-control rounded-pill"><button class="btn btn-primary rounded-pill px-4">Waitlist</button></form>
+                </div>
+            </div>
+            <hr class="my-5 opacity-10">
+            <p class="text-center text-muted small m-0">&copy; 2026 Smart NGO Platform. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="app.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+        document.addEventListener('DOMContentLoaded', () => {
+            renderFeaturedProjects();
+            updateNav();
+        });
+    </script>
+</body>
+</html>

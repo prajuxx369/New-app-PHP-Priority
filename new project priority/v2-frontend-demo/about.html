@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Mission - Smart NGO</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"><link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body onload="updateNav()">
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top py-3">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="index.html"><img src="images/logo.png" alt="Logo">Smart NGO</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="transparency.html">Transparency</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="d-flex align-items-center" id="navActions">
+                    <a href="login.html" class="btn btn-outline-primary me-2 px-4 rounded-pill">Login</a>
+                    <a href="register.html" class="btn btn-primary px-4 rounded-pill text-white">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container py-5">
+        <div class="row align-items-center mb-5">
+            <div class="col-md-6">
+                <h2 class="fw-bold display-4 mb-4">Born from a <span class="text-primary">Trust Crisis.</span></h2>
+                <p class="lead mb-4">In 2024, our founders realized a painful truth: billions are donated annually, but 40% of donors don't know where their money really goes.</p>
+                <p class="text-muted">We didn't just want to build another donation site. We wanted to build a <strong>transparency engine</strong>. A platform where 'Impact' isn't just a buzzword, but a verified fact backed by data, receipts, and photographic evidence.</p>
+            </div>
+            <div class="col-md-6">
+                <div class="p-5 bg-primary text-white rounded-5 shadow-lg">
+                    <h3 class="fw-bold mb-4">The Transparency Charter</h3>
+                    <div class="d-flex mb-4"><i class="fas fa-lock me-3 fs-3"></i><div><h6 class="fw-bold">Zero-Hiding Policy</h6><p class="small opacity-75">Every NGO on our platform agrees to financial audits per project.</p></div></div>
+                    <div class="d-flex mb-4"><i class="fas fa-check-double me-3 fs-3"></i><div><h6 class="fw-bold">Proof-of-Impact</h6><p class="small opacity-75">Funds stay locked until visual or documentary proof is uploaded.</p></div></div>
+                    <div class="d-flex"><i class="fas fa-users me-3 fs-3"></i><div><h6 class="fw-bold">Community Vetting</h6><p class="small opacity-75">Donors can flag updates that lack clarity or authenticity.</p></div></div>
+                </div>
+            </div>
+        </div>
+
+        <section class="py-5">
+            <h2 class="fw-bold mb-5 text-center">Meet the Visionaries</h2>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-4 text-center">
+                    <img src="images/team_ceo.png" class="rounded-pill mb-4 shadow-sm" style="width: 200px; height: 200px; object-fit: cover;">
+                    <h5 class="fw-bold">Nandini Kawdi</h5>
+                    <p class="text-primary small fw-bold">CEO & Founder</p>
+                    <p class="text-muted small px-4">Former Director of a prominent Indian NGO with over 15 years in social development and international aid. Nandini is a leading voice for transparency in the non-profit sector.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <img src="images/team_cto.png" class="rounded-pill mb-4 shadow-sm" style="width: 200px; height: 200px; object-fit: cover;">
+                    <h5 class="fw-bold">Arjun Mehta</h5>
+                    <p class="text-primary small fw-bold">CTO</p>
+                    <p class="text-muted small px-4">Ex-Silicon Valley lead engineer who returned to India to build the next generation of social impact infrastructure. Expert in secure transaction tracking and localized data systems.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5 mt-5 bg-white rounded-5 shadow-sm p-5 border">
+            <div class="row text-center">
+                <div class="col-md-4"><h3 class="fw-bold text-primary">12+</h3><p class="text-muted">Countries Reached</p></div>
+                <div class="col-md-4"><h3 class="fw-bold text-primary">500+</h3><p class="text-muted">Projects Completed</p></div>
+                <div class="col-md-4"><h3 class="fw-bold text-primary">0</h3><p class="text-muted">Unaccounted Funds</p></div>
+            </div>
+        </section>
+    <footer class="bg-dark text-white py-5 border-top border-secondary mt-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-md-4">
+                    <h4 class="fw-bold text-primary mb-4">Smart NGO</h4>
+                    <p class="text-white-50 small">The world's most transparent platform for social good. We turn every donation into a verifiable story of impact.</p>
+                </div>
+                <div class="col-md-2">
+                    <h6 class="fw-bold mb-3">Platform</h6>
+                    <ul class="list-unstyled small"><li class="mb-2"><a href="projects.html" class="text-white-50 text-decoration-none">Projects</a></li><li class="mb-2"><a href="transparency.html" class="text-white-50 text-decoration-none">How it works</a></li></ul>
+                </div>
+                <div class="col-md-2">
+                    <h6 class="fw-bold mb-3">About</h6>
+                    <ul class="list-unstyled small"><li class="mb-2"><a href="about.html" class="text-white-50 text-decoration-none">Our Mission</a></li><li class="mb-2"><a href="contact.html" class="text-white-50 text-decoration-none">Get in touch</a></li></ul>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="fw-bold mb-3">Newsletter</h6>
+                    <form class="d-flex gap-2"><input type="email" placeholder="Your email" class="form-control rounded-pill bg-transparent border-secondary text-white"><button class="btn btn-primary rounded-pill px-4 text-white">Join</button></form>
+                </div>
+            </div>
+            <hr class="my-5 opacity-10">
+            <p class="text-center text-white-50 small m-0">&copy; 2026 Smart NGO Platform. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>

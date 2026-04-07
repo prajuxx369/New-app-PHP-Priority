@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impact Dashboard - Smart NGO</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"><link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body onload="renderDashboard(); updateNav()">
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top mb-4">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="index.html"><img src="images/logo.png" alt="Logo">Smart NGO</a>
+            <div id="navActions"></div>
+        </div>
+    </nav>
+
+    <div class="container py-4">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="dashboard-card mb-4" style="background: linear-gradient(135deg, var(--primary), #002d72); color: white;">
+                    <div class="text-center">
+                        <img src="images/team_ceo.png" class="rounded-pill mb-3 border border-3 border-white" style="width: 80px; height: 80px; object-fit:cover;">
+                        <h5 class="fw-bold m-0" id="userName">Nandini Kawdi</h5>
+                        <p class="small opacity-75" id="userRole">Investor in Good</p>
+                    </div>
+                </div>
+                <div class="dashboard-card p-3">
+                    <a href="#" class="sidebar-link active"><i class="fas fa-th-large me-2"></i>Overview</a>
+                    <a href="projects.html" class="sidebar-link"><i class="fas fa-search me-2"></i>Browse Projects</a>
+                    <a href="#" class="sidebar-link"><i class="fas fa-receipt me-2"></i>Tax Receipts</a>
+                    <a href="#" class="sidebar-link text-danger mt-4" onclick="logout()"><i class="fas fa-sign-out-alt me-2"></i>Sign Out</a>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div id="dashboardContent">
+                    <div class="row g-4 mb-4">
+                        <div class="col-md-4">
+                            <div class="dashboard-card text-center">
+                                <h6 class="text-muted small fw-bold text-uppercase mb-3">Total Impact</h6>
+                                <h2 class="fw-bold text-primary mb-0">$1,540.00</h2>
+                                <p class="text-success small mt-1">+12% from last month</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="dashboard-card text-center">
+                                <h6 class="text-muted small fw-bold text-uppercase mb-3">Lives Impacted</h6>
+                                <h2 class="fw-bold text-dark mb-0">86</h2>
+                                <p class="text-muted small mt-1">Verified Outcomes</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="dashboard-card text-center">
+                                <h6 class="text-muted small fw-bold text-uppercase mb-3">Trust Score</h6>
+                                <h2 class="fw-bold text-success mb-0">98/100</h2>
+                                <p class="text-muted small mt-1">Transparency Index</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row g-4">
+                        <div class="col-md-8">
+                            <div class="dashboard-card">
+                                <h6 class="fw-bold mb-4">Donation vs Impact Timeline</h6>
+                                <div class="chart-container"><canvas id="impactChart"></canvas></div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="dashboard-card">
+                                <h6 class="fw-bold mb-4">Impact Distribution</h6>
+                                <div class="chart-container" style="height: 200px;"><canvas id="distChart"></canvas></div>
+                                <ul class="list-unstyled small mt-4">
+                                    <li class="mb-2 d-flex justify-content-between"><span><i class="fas fa-circle text-primary me-2"></i>Education</span><strong>45%</strong></li>
+                                    <li class="mb-2 d-flex justify-content-between"><span><i class="fas fa-circle text-success me-2"></i>Health</span><strong>30%</strong></li>
+                                    <li class="mb-2 d-flex justify-content-between"><span><i class="fas fa-circle text-warning me-2"></i>Enviro</span><strong>25%</strong></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white py-5 border-top border-secondary mt-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-md-4">
+                    <h4 class="fw-bold text-primary mb-4">Smart NGO</h4>
+                    <p class="text-white-50 small">The world's most transparent platform for social good. We turn every donation into a verifiable story of impact.</p>
+                </div>
+                <div class="col-md-2">
+                    <h6 class="fw-bold mb-3">Platform</h6>
+                    <ul class="list-unstyled small"><li class="mb-2"><a href="projects.html" class="text-white-50 text-decoration-none">Projects</a></li><li class="mb-2"><a href="transparency.html" class="text-white-50 text-decoration-none">How it works</a></li></ul>
+                </div>
+                <div class="col-md-2">
+                    <h6 class="fw-bold mb-3">About</h6>
+                    <ul class="list-unstyled small"><li class="mb-2"><a href="about.html" class="text-white-50 text-decoration-none">Our Mission</a></li><li class="mb-2"><a href="contact.html" class="text-white-50 text-decoration-none">Get in touch</a></li></ul>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="fw-bold mb-3">Newsletter</h6>
+                    <form class="d-flex gap-2"><input type="email" placeholder="Your email" class="form-control rounded-pill bg-transparent border-secondary text-white"><button class="btn btn-primary rounded-pill px-4 text-white">Join</button></form>
+                </div>
+            </div>
+            <hr class="my-5 opacity-10">
+            <p class="text-center text-white-50 small m-0">&copy; 2026 Smart NGO Platform. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script>
+        function renderDashboard() {
+            const ctx = document.getElementById('impactChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                    datasets: [{
+                        label: 'Verification Proofs Received',
+                        data: [5, 12, 19, 15, 25, 32],
+                        borderColor: '#0046b3',
+                        tension: 0.4,
+                        fill: true,
+                        backgroundColor: 'rgba(0, 70, 179, 0.05)'
+                    }]
+                }
+            });
+
+            const dctx = document.getElementById('distChart').getContext('2d');
+            new Chart(dctx, {
+                type: 'doughnut',
+                data: {
+                    datasets: [{
+                        data: [45, 30, 25],
+                        backgroundColor: ['#0046b3', '#1a8e3d', '#ffc107']
+                    }]
+                },
+                options: { cutout: '70%'}
+            });
+            
+            const user = JSON.parse(localStorage.getItem('currentUser')) || { name: 'Nandini Kawdi', role: 'donor' };
+            document.getElementById('userName').innerText = user.name;
+            document.getElementById('userRole').innerText = user.role.toUpperCase() + ' Dashboard';
+        }
+    </script>
+</body>
+</html>

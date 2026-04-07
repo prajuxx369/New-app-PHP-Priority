@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;&display=swap');
+
+:root {
+    --primary: #0046b3;
+    --secondary: #1a8e3d;
+    --light-bg: #fdfdfd;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body { 
+    font-family: 'Plus Jakarta Sans', sans-serif; 
+    background-color: var(--light-bg); 
+    color: #2c3e50;
+}
+.hero-section { 
+    background: linear-gradient(rgba(0, 70, 179, 0.05), rgba(255, 255, 255, 0.95)), url('images/hero_bg.png'); 
+    background-size: cover;
+    background-position: center;
+    padding: 120px 0;
+}
+
+.animate-up { animation: fadeInUp 1s ease-out forwards; opacity: 0; }
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+}
+
+.step-card {
+    border-radius: 50px;
+    background: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    padding: 40px;
+    transition: all 0.3s ease;
+}
+.step-card:hover { transform: scale(1.05); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+
+/* Premium Payment Gateway Styles */
+.payment-modal {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(15, 23, 42, 0.9); backdrop-filter: blur(10px);
+    display: none; align-items: center; justify-content: center; z-index: 2000;
+}
+
+.payment-card {
+    background: white; width: 100%; max-width: 500px; border-radius: 2rem;
+    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5); overflow: hidden;
+}
+
+.gateway-header {
+    background: #f8fafc; padding: 2rem; border-bottom: 1px solid #e2e8f0;
+}
+
+.card-input-group {
+    background: #f1f5f9; border-radius: 1rem; padding: 1.5rem; margin-bottom: 1.5rem;
+}
+
+.card-field-box {
+    background: white; border: 1px solid #cbd5e1; border-radius: 0.75rem; padding: 0.75rem 1rem; margin-bottom: 1rem;
+}
+
+.card-field-box:focus-within {
+    border-color: var(--primary-color); box-shadow: 0 0 0 4px rgba(var(--primary-rgb), 0.1);
+}
+
+.success-checkmark {
+    width: 80px; height: 80px; border-radius: 50%; display: block; stroke-width: 2;
+    stroke: #22c55e; stroke-miterlimit: 10; margin: 10% auto; box-shadow: inset 0 0 0 #22c55e;
+    animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+}
+
+.checkmark__circle { stroke-dasharray: 166; stroke-dashoffset: 166; stroke-width: 2; stroke-miterlimit: 10; stroke: #22c55e; fill: none; animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards; }
+.checkmark__check { transform-origin: 50% 50%; stroke-dasharray: 48; stroke-dashoffset: 48; animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards; }
+
+@keyframes stroke { 100% { stroke-dashoffset: 0; } }
+@keyframes scale { 0%, 100% { transform: none; } 50% { transform: scale3d(1.1, 1.1, 1); } }
+@keyframes fill { 100% { box-shadow: inset 0 0 0 30px #ffffff00; } }
+
+.navbar-brand img { height: 40px; margin-right: 12px; }
+
+.dashboard-card { 
+    background: white; 
+    border-radius: 20px; 
+    padding: 30px; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.02); 
+    border: 1px solid #f0f0f0;
+}
+
+.sidebar-link {
+    display: block;
+    padding: 12px 20px;
+    color: #6c757d;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    transition: all 0.2s;
+}
+.sidebar-link.active, .sidebar-link:hover {
+    background: var(--primary);
+    color: white;
+}
+
+.chart-container { position: relative; height: 300px; width: 100%; }
+
+footer { background: #0a1128; color: white; padding: 80px 0 40px; }
+footer a { color: rgba(255,255,255,0.7); text-decoration: none; transition: 0.2s; }
+footer a:hover { color: white; }
+/* Payment Modal Styling */
+.payment-modal {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6); backdrop-filter: blur(5px);
+    display: none; align-items: center; justify-content: center; z-index: 2000;
+}
+.payment-card {
+    background: white; width: 100%; max-width: 450px;
+    border-radius: 30px; overflow: hidden; position: relative;
+    box-shadow: 0 40px 100px rgba(0,0,0,0.3);
+}
+.credit-card-preview {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: white; padding: 30px; border-radius: 20px; margin-bottom: 30px;
+}
+.success-checkmark { 
+    width: 80px; height: 80px; margin: 0 auto;
+    border-radius: 50%; display: block; border: 4px solid #4bb543;
+    position: relative; animation: scale 0.3s ease-in-out forwards;
+}
+.success-checkmark:after {
+    content: ''; position: absolute; left: 24px; top: 40px;
+    width: 15px; height: 30px; border: solid #4bb543;
+    border-width: 0 4px 4px 0; transform: rotate(45deg);
+}
+
+@keyframes scale { 0% { transform: scale(0); } 100% { transform: scale(1); } }
